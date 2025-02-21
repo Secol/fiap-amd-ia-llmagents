@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  flowise:
+    image: flowiseai/flowise:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - FLOWISE_USERNAME=user
+      - FLOWISE_PASSWORD=password
+    volumes:
+      - flowise_data:/root/.flowise
+
+volumes:
+  flowise_data:
